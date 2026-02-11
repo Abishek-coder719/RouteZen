@@ -1,0 +1,222 @@
+:root {
+    /* Color Palette */
+    --olive-green: #6B7D3C;
+    --olive-light: #7A8B3A;
+    --off-white: #FAFAFA;
+    --cream: #F8F8F6;
+    --text-dark: #2C2C2C;
+    --text-light: #4A4A4A;
+    --border: #E0E0DE;
+
+    /* Status Colors */
+    --success: #4CAF50;
+    --warning: #FF9800;
+    --error: #F44336;
+    --info: #2196F3;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background: var(--off-white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.app-header {
+    background: var(--olive-green);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo-circle {
+    width: 60px;
+    height: 60px;
+    background: var(--cream);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.logo-emoji {
+    font-size: 28px;
+}
+
+.app-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.app-tagline {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #000000;
+}
+
+.app-description {
+    font-size: 1rem;
+    color: #000000;
+    font-weight: 400;
+}
+
+/* Search Card */
+.main-content {
+    padding: 40px 0;
+}
+
+.search-card {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--olive-green);
+    box-shadow: 0 0 0 4px rgba(107, 125, 60, 0.1);
+}
+
+.search-btn {
+    padding: 16px 32px;
+    border: none;
+    border-radius: 12px;
+    background: var(--olive-green);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(107, 125, 60, 0.3);
+}
+
+.search-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(107, 125, 60, 0.4);
+}
+
+/* Results Table */
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.results-table th {
+    background: var(--cream);
+    color: var(--text-dark);
+    padding: 20px 16px;
+    text-align: left;
+    font-weight: 700;
+    border-bottom: 2px solid var(--border);
+}
+
+.results-table td {
+    padding: 20px 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.results-table tbody tr:hover {
+    background: rgba(107, 125, 60, 0.05);
+    cursor: pointer;
+}
+
+/* Bus Type Badges */
+.bus-type {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+}
+
+.bus-type.ordinary {
+    background: var(--success);
+}
+
+.bus-type.limited {
+    background: var(--warning);
+}
+
+.bus-type.superfast {
+    background: var(--error);
+}
+
+/* Footer */
+.app-footer {
+    background: var(--cream);
+    padding: 20px 0;
+    text-align: center;
+    color: var(--text-light);
+    margin-top: 60px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .app-title {
+        font-size: 2rem;
+    }
+
+    .search-card {
+        padding: 24px;
+        margin: 0 16px;
+    }
+
+    .results-table {
+        font-size: 0.9rem;
+    }
+}
